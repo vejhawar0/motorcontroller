@@ -3,3 +3,16 @@ Github update 1 Questions:
 - Do digital logic levels depend on source voltage? For example, let's say that a 3.3V powered device is sending signals to a 5V power device. From my understanding of the datasheet, a direct connection between the signals should not be allowed. However, why is this? What are the internal mechanisms of the pins that make it so that the logic levels need to be based off of the source voltage?
 - I understand that there is a way to both use the battery as a source as well as to charge it using the USB. However, wouldn't this mean not being able to put a diode within the circuit directing current in one direction? Isn't this a hazard, destroying the circuit the moment a bit of noise comes through?
 - Power Ground in the context of a switching regulator for our circuit to amplify 3.7 V battery to 5 V source. Do we just connect Power Ground to Battery Ground?
+- Why are battery charging ICs designed for 4.2? Is there a way I can use the 4.2 IC in order to charge up the 3.7 V battery. If not, are there convenient 4.2 V batteries that I can use instead?
+
+
+Notes:
+Idea regarding flashing code using USB needs to be throught out a bit more.
+- Need to add compatibility for ST_link in order to flash the code.
+- Currently have found multiple ways of flashing code. One is the stm32 flash softwware which takes in a serial line interface to communicate. 
+- THe usb flashing is a possibility. This would however, imply that the PA11 Pins and PA12 pins have been preset as USB loader pins. However, I'm not sure if this is the case. 
+- need to double check the orientation of the battery connector to see if power is being supplied through the right pins and that I haven't switched power and ground.
+- It is indeed possible to charge a 3.7 V battery using the 4.2V charger, as the max cutoff for the 3.7 V battery is 4.2. Does this mean a bit of noise can easily damage the battery?
+
+Figure out what voltage the D+ and D- lines are supplied at. Do I need to pull up in order to demonstrate low or high power?
+

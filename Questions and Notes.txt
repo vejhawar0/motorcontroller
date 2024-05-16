@@ -1,0 +1,6 @@
+Github update 1 Questions: 
+- How does the switching regulator mechanism work?
+- Do digital logic levels depend on source voltage? For example, let's say that a 3.3V powered device is sending signals to a 5V power device. From my understanding of the datasheet, a direct connection between the signals should not be allowed. However, why is this? What are the internal mechanisms of the pins that make it so that the logic levels need to be based off of the source voltage?
+- I understand that there is a way to both use the battery as a source as well as to charge it using the USB. However, wouldn't this mean not being able to put a diode within the circuit directing current in one direction? Isn't this a hazard, destroying the circuit the moment a bit of noise comes through?
+- Power Ground in the context of a switching regulator for our circuit to amplify 3.7 V battery to 5 V source. Do we just connect Power Ground to Battery Ground?
+
